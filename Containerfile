@@ -2,9 +2,12 @@
 FROM registry.redhat.io/jboss-eap-8/eap8-openjdk17-builder-openshift-rhel8:latest AS builder
 
 # set environment variables
-ENV POSTGRESQL_DRIVER_VERSION=42.5.1
+# assuming oracle driver version 21.16.0.0
+ENV ORACLE_DRIVER_ARTIFACT_ID=ojdbc17
+ENV ORACLE_DRIVER_VERSION=23.6.0.24.10
+
 ENV GALLEON_PROVISION_FEATURE_PACKS=org.jboss.eap:wildfly-ee-galleon-pack,org.jboss.eap.cloud:eap-cloud-galleon-pack,org.jboss.eap:eap-datasources-galleon-pack
-ENV GALLEON_PROVISION_LAYERS=postgresql-datasource,jaxrs-server
+ENV GALLEON_PROVISION_LAYERS=oracle-datasource,jaxrs-server
 ENV GALLEON_PROVISION_CHANNELS=org.jboss.eap.channels:eap-8.0
 # ENV GALLEON_MAVEN_ARGS="-X -e"  # for debugging
 
