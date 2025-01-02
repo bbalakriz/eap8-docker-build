@@ -1,4 +1,4 @@
-This repository packages a sample application `WAR` and the `IBM MQ 9.3.0.2` resource adapter archive along with `postgresql` drivers to deploy and run the application on OpenShift
+This repository packages a sample application `WAR` and `Oracle datasource` (ojdbc17) and `IBM MQ 9.3.0.2` resource adapter archive along with `postgresql` drivers to deploy and run the application on OpenShift
 
 ---
 ### Building a EAP8 container image with applications and IBM MQ resource adapter
